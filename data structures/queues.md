@@ -1,4 +1,8 @@
-# Implement Queues using Arrays
+# Queues
+
+A Queue Data Structure is a fundamental concept in computer science used for storing and managing data in a specific order. It follows the principle of "First in, First out" (FIFO), where the first element added to the queue is the first one to be removed. Queues are commonly used in various algorithms and applications for their simplicity and efficiency in managing data flow.
+
+## Implement Queues using Arrays
 
 ```cpp
 class ArrayQueue {
@@ -60,7 +64,7 @@ public:
 
 ```
 
-# Implement Queues using Stacks
+## Implement Queues using Stacks
 
 ```cpp
 class StackQueue {
@@ -111,7 +115,7 @@ public:
 // Space Complexity: O(2N) because, in the worst case, both the input and output stacks can each hold up to N elements, totalling 2N elements. Here N is the size of the stack.
 ```
 
-# Implement Queues using Linked List
+## Implement Queues using Linked List
 
 ```cpp
 class StackQueue {

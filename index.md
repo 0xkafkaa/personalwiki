@@ -57,8 +57,8 @@
 
 <ul>
 <li><a href="/data structures/queues">Queues</a></li>
-<li><a href="/data structures/stacks">Stacks</a></li>
 <li><a href="/data structures/sorting_algorithms">Sorting Algorithms</a></li>
+<li><a href="/data structures/stacks">Stacks</a></li>
 </ul>
 
 

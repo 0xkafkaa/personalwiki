@@ -34,12 +34,12 @@ export const sidebar = [
         "link": "/data structures/queues"
       },
       {
-        "text": "Stacks",
-        "link": "/data structures/stacks"
-      },
-      {
         "text": "Sorting Algorithms",
         "link": "/data structures/sorting_algorithms"
+      },
+      {
+        "text": "Stacks",
+        "link": "/data structures/stacks"
       }
     ]
   },

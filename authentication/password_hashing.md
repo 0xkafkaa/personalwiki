@@ -5,7 +5,7 @@
 - Hash functions designed to create data structure are made to be fast while cryptographic hash functions are designed to implement password hashing.
 - SHA256, SHA512, RipeMD and WHIRLPOOL are a few cryptographic hash functions.
 
-# Attacks used to crack plain password
+## Attacks used to crack plain password
 
 1. Dictionary Attack
 
@@ -26,24 +26,24 @@
 
 - A lookup table that maps each password hash from the compromised user account database to a list of users who had that hash.
 
-# Salting
+## Salting
 
 - The advantage of lookup tables and rainbow tables is the exact hash is used to compare against the password hashes, it can be avoided by randomizing each hash. So, hash of two passwords will never be the same.
 - Ranomization is nothing but appending or prepending a string called _Salt_ to the password before hashing.
 - The salt is usually stored in the user's db or it is mostly part of the hash itself.
 
-# Wrong implementations of Salt
+## Wrong implementations of Salt
 
 - Usage of same salt in each hash, a new random salt must be generated each time a user creates an account or changes thier password.
 - The salt should be short, an ideal size would be size of the hash and the salt should be same.
 - Never combine multiple hash functions with the notion that it would make the password more secure, in reality it offers little benefit. Also, it sometimes lead to less secure hash functions.
 
-# How to Hash
+## How to Hash
 
 - Salt should be generated using a _Crytpgraphically Secure Pseudo-Random Number Generator_, since they provide high level of randomness and are completely unpredictable. _os.urandom_ for python
 - The salt needs to be unique per user per password.
 - Always hash on the server
 
-# Resources
+## Resources
 
 [Salted Hashing - Doing it right](https://www.codeproject.com/Articles/704865/Salted-Password-Hashing-Doing-it-Right)

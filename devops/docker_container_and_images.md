@@ -1,6 +1,6 @@
 # Understanding Docker containers and images
 
-- Docker is a platform for running applications in a light weight environment called /containers/.
+- Docker is a platform for running applications in a light weight environment called **containers**.
 
 ![Image](/understanding-docker-containers-and-imag-2.jpg)
 
@@ -21,8 +21,6 @@
   - Cloud native applications are built with microservice architectures where every component runs in a container.
 
 ![Image](/understanding-docker-containers-and-imag-5.jpg)
-
-# Understanding Docker and running Hello World
 
 ## Hello World in Docker
 
@@ -60,8 +58,6 @@
   # inspect the container
   docker container inspect CONTAINER
 ```
-
-## Hosting a website in a container
 
 ## State of a Container
 

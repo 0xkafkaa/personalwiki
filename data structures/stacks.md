@@ -1,4 +1,8 @@
-# Implement Stacks using Arrays
+# Stacks
+
+A Stack is a linear data structure that follows a particular order in which the operations are performed. The order may be LIFO(Last In First Out) or FILO(First In Last Out). LIFO implies that the element that is inserted last, comes out first and FILO implies that the element that is inserted first, comes out last.
+
+## Implement Stacks using Arrays
 
 ```cpp
 class ArrayStack {
@@ -45,7 +49,7 @@ public:
 // Space Complexity: O(N) for using a stack which is equivalent to the size of the array.
 ```
 
-# Implement Stacks using Queue
+## Implement Stacks using Queue
 
 ```cpp
 class QueueStack {
@@ -83,7 +87,7 @@ public:
 // Space Complexity: O(1) no extra space used.
 ```
 
-# Implement Stacks using Linked List
+## Implement Stacks using Linked List
 
 ```cpp
 class LinkedListStack {

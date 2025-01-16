@@ -1,4 +1,8 @@
-# Selection Sort
+# Sorting
+
+A Sorting Algorithm is used to rearrange a given array or list of elements in an order. Sorting is provided in library implementation of most of the programming languages.
+
+## Selection Sort
 
 - Select minimum and swap
 
@@ -18,7 +22,7 @@
     };
 ```
 
-# Bubble Sort
+## Bubble Sort
 
 - Push the max element to the last by using adjacent swaps
 - The following piece of code has a time complexity of O(n<sup>2</sup>)
@@ -60,7 +64,7 @@
     };
 ```
 
-# Insertion Sort
+## Insertion Sort
 
 - Take an element and place it in its correct position.
 - Time Complexity of O(n<sup>2</sup>). O(n) when the array is already sorted.
@@ -81,7 +85,7 @@
     };
 ```
 
-# Quick Sort
+## Quick Sort
 
 - Pick a Pivot. A Pivot can be
   - First element of the array.
@@ -126,7 +130,7 @@
     // Space Complexity: O(1)
 ```
 
-# Merge Sort
+## Merge Sort
 
 - Divide the data structure and merge them once they are sorted.
 - Instead of diving the array, we can use index as a reference to divide the array hypothetically.

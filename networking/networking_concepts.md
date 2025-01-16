@@ -9,9 +9,9 @@ Exchange of random bytes of data between two computers either over the internet 
 - A way of routing data from one computer to another.
 - Network is a hardware, and OS controls all the access to the hardware. So, if we need to communitate to the network we need to do it via the OS and its being done by an API called the **Sockets API**. It gives us a way to read and write data over the internet.
 
-# Types of communication networks
+## Types of communication networks
 
-## Circuit Switched
+### Circuit Switched
 
 - Its old school and its not used anymore.
 - How the communication works over here?
@@ -23,7 +23,7 @@ Exchange of random bytes of data between two computers either over the internet 
   - If the distance is long, requires more operators there by leading to increased cost. Though it was overcame by sending electro magnetic signals.
   - Multiple people coulnd't use the same route at a single time and much more.
 
-## Packet Switched
+### Packet Switched
 
 - The data is divided to many small packets and sent over the cables under the over ocean from souce to the destination.
 - Once the packets reach the destination, they are merged together and they are delivered.
@@ -32,12 +32,12 @@ Exchange of random bytes of data between two computers either over the internet 
   - Doesn't require a dedicated circuit between every communication pair of computers as required by circuit switched networks.
   - Multiple computers can use the cable to send the individual packets at the same time.
 
-# Client Server Architecture
+## Client Server Architecture
 
 - A _server_ is a program that listens for incoming connections and accepts them.
 - Usually, the server listens for a request from a client and sends back a response to the client.
 
-# Protocol
+## Protocol
 
 A set of rules which enables the program, the server and the client in this case to communicate with each other. Following are some of the protocols.
 
@@ -47,7 +47,7 @@ A set of rules which enables the program, the server and the client in this case
 - HTTP - used to get web pages and other web requests.
 - Ethernet - used to send data over LAN.
 
-# Network layers and abstraction
+## Network layers and abstraction
 
 Here’s a quick overview of what happens when data goes out on the network. We’ll cover this in much more detail in the coming
 
@@ -66,18 +66,18 @@ And since the layers don’t care what data is encapsulated below them, you can 
 For example, you might be getting a web page with HTTP/TCP/IP/Ethernet, or you might be transmitting a file to another computer with TFTP/UDP/IP/Ethernet. IP and Ethernet work fine in both cases, because they are indifferent about the data they are sending.
 There are many, many details omitted from this description, but we’re still in high-level overview land.
 
-# Difference between Wired versus Wireless networks
+## Difference between Wired versus Wireless networks
 
 - Computers are connected to a LAN either via a physical ethernet cable or a wifi access point.
 - They both use Ethernet protocol for low level communication.
 
-# Introducing The Sockets API
+## Introducing The Sockets API
 
 - In Unix, the sockets API gives processes a way to communicate with each other.
 - Its is a blend of libray calls and system call which are nothing but the functions directly called by the OS.
 - It supports a variety of methods of communication, and one of them is over the Internet.
 
-# Client Connection Process
+## Client Connection Process
 
 Following are the steps to connect to another computer using sockets.
 
@@ -90,7 +90,7 @@ Following are the steps to connect to another computer using sockets.
 - Send data and receive data.
 - Close the connection.
 
-# Server Listening Process
+## Server Listening Process
 
 - Ask the OS for a socket
 - Bind the socket to a port
@@ -107,7 +107,7 @@ Following are the steps to connect to another computer using sockets.
   - The server recieves the request from the client and the sends back the response.
 - Go back and accept another connection.
 
-# Questions
+## Questions
 
 - What role does bind() play on the server side?
 
@@ -127,52 +127,52 @@ Following are the steps to connect to another computer using sockets.
   - The port helps to identify to which process the received data should be sent to on the host.
   - A computer can have multiple simultaneous connections, all receiving data for different processes (mail, web, database, etc). How does the computer tell which data goes where? When the computer receives data, the port information allows it to give the data to the correct process. Eg, data with port 80 should go to the http process, data with port 25 should go to the mail processes and so on.
 
-# Network definitions
+## Network definitions
 
-## IP Address
+### IP Address
 
 - A 4 byte unique number used to identify your computer on the internet.
 
-## Port
+### Port
 
 - Programs talk through ports, which are numbered 0-65535 and are associated with the TCP or UDP protocols.
 
-## Transmission Control Protocol (TCP)
+### Transmission Control Protocol (TCP)
 
 - Responsible for reliable and inorder data transmission.
 - Make packet switched network feel more like a circuit switched network.
 - TCP used port numbers to identify senders and receivers of a data.
 - In sockets API, TCP sockets are called stream sockets.
 
-## User Datagram Protocol (UDP)
+### User Datagram Protocol (UDP)
 
 - Lightweight sibling of TCP.
 - Doesn't guarantee data will arrive, or that it will be in order, or that it won't be dublicated.
 - If it arrives, it will be error free.
 - In sockets API, UDP sockets are called datagram sockets.
 
-## IPv6
+### IPv6
 
 - Since 4 bytes is enough to hold a unique address, the address size is increased to 16 bytes.
 
-## Network Address Translation (NAT)
+### Network Address Translation (NAT)
 
 - Private subnets with non globally unique addresses that get translated to globally unique addresses as they pass through the router.
 - Private subnets commonly starts witha addresses 192.168.x.x or 10.x.x.x.
 
-## Router
+### Router
 
 - A specialized computer that forwards packets through the packet switching network. It inspects destination IP addresses to determine which route will get the packet closer to its goal.
 
-## Internet Protocol
+### Internet Protocol
 
 - Responsible for identifying computers by IP address and using those address to route data to recipients through a variety of routers.
 
-## Local Area Network (LAN)
+### Local Area Network (LAN)
 
 - A network where all the computers are effectively directly connected, not via a router.
 
-## Interface
+### Interface
 
 - Physical networking hardware on a computer.
 - A computer can have a number of interfaces, but most likely have two one for wired Ethernet interface and the other for wireless Ethernet interface.
@@ -181,7 +181,7 @@ Following are the steps to connect to another computer using sockets.
 - Each interface typically has one IP address and one MAC address.
 - The OS names interfaces on your local machine, they might be something like wlan0 or eth2 or something else, depends of the hardware and the OS.
 
-## Header
+### Header
 
 - Data that is prepended to some other data by a particular protocol, which contains appropriate information about that protocol.
 - TCP header contains some error detection information, correction information and a source and destination port numbner.
@@ -190,17 +190,17 @@ Following are the steps to connect to another computer using sockets.
 - HTTP contains length of the data, the date modified and the status of the request.
 - Analogous to adding a letter in an envelope.
 
-## Network Adapter
+### Network Adapter
 
 - The hardware on the computer which does the network stuff, also called the network card.
 
-## MAC address
+### MAC address
 
 - Ethernet interfaces have MAC addresses, which take the form aa:bb:cc:dd:ee:ff, where the fields are random one-byte hex numbers.
 - They are 6 byte and must be unique on the LAN.
 - When a network adapter is manufactured, it is given a unique MAC addresses that it keeps for life.
 
-# Layered Network Model
+## Layered Network Model
 
 - When data is sent over the internet, the data is encapsulated in different layers of protocols.
 - These protocols are responsible for different things, e.g, describing data, preserving data integrity, routing, local delivery, etc.
@@ -260,7 +260,7 @@ It sends it out to that interface, which wraps it up in another Ethernet frame a
 
 (Or maybe it’s not Ethernet! Ethernet is a protocol, and there are other low-level protocols in use with fiber optic lines and so on. This is part of the beauty of these layers of abstraction–you can switch protocols partway through transmission and the HTTP data above it is completely unaware that any such thing has happened.)
 
-# The Internet Layer Model
+## The Internet Layer Model
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -311,74 +311,25 @@ It sends it out to that interface, which wraps it up in another Ethernet frame a
 - When the data is being transmitted through the layers, the protocols add their own headers on top of everything else so far.
 - Since there are other networks that aren't the Internet, there is a general model call the OSI model.
 
-# The ISO OSI Network Layer Model
+## The ISO OSI Network Layer Model
 
 - International Organization for Standardization Open Systems Interconnect model.
 - OSI model is like the Internet model, but more granular.
 - The Internet model maps to the OSI model, like so, with a single layer of the Internet model mapping to multiple layers of the OSI model.
 
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-left" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="org-left">ISO OSI Layer</th>
-<th scope="col" class="org-left">Internet Layer</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="org-left">Application</td>
-<td class="org-left">Application</td>
-</tr>
-
-<tr>
-<td class="org-left">Presentation</td>
-<td class="org-left">Application</td>
-</tr>
-
-<tr>
-<td class="org-left">Session</td>
-<td class="org-left">Application</td>
-</tr>
-
-<tr>
-<td class="org-left">Transport</td>
-<td class="org-left">Transport</td>
-</tr>
-
-<tr>
-<td class="org-left">Network</td>
-<td class="org-left">Network</td>
-</tr>
-
-<tr>
-<td class="org-left">Data link</td>
-<td class="org-left">Link</td>
-</tr>
-
-<tr>
-<td class="org-left">Physical</td>
-<td class="org-left">Link</td>
-</tr>
-</tbody>
-</table>
+| ISO OSI Layer | Internet Layer |
+| ------------- | -------------- |
+| Application   | Application    |
+| Presentation  | Application    |
+| Session       | Application    |
+| Transport     | Transport      |
+| Network       | Network        |
+| Data link     | Link           |
+| Physical      | Link           |
 
 ## Protocols
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-left" />
-
-<col  class="org-left" />
-</colgroup>
 <thead>
 <tr>
 <th scope="col" class="org-left">ISO OSI Layer</th>
@@ -431,7 +382,7 @@ It sends it out to that interface, which wraps it up in another Ethernet frame a
 </tbody>
 </table>
 
-# Questions
+## Questions
 
 - When a router sees an IP address, how does it know where to forward it?
 - If an IPv4 address is 4 bytes, roughly how many different computers can that represent in total, assuming each computer has a unique IP address?
@@ -440,7 +391,7 @@ It sends it out to that interface, which wraps it up in another Ethernet frame a
 - Speculate on why IP is above TCP in the layered model. Why does the TCP header go on before the IP header and not the other way around?
 - If UDP is unreliable and TCP is reliable, speculate on why one might ever use UDP.
 
-# The Internet Protocol
+## The Internet Protocol
 
 - Protocol responsible for routing packets of data around the Internet, analogous to how the post office is responsible for routing letters aroung the mail network.
 - _Host_ is just an another name for a computer.
@@ -453,7 +404,7 @@ It sends it out to that interface, which wraps it up in another Ethernet frame a
 - The trailing bits identify the individual hosts on that network.
 - These individual networks are called _subnets_ and the number of hosts they can support depend on how many bits they're reserved for identifying the hosts on that subnet.
 
-### Example
+## Example
 
 As a contrived non-Internet example, let’s look at an 8-bit “address”, and we’ll say the first 6 bits are the network number and the last 2 bits are the host number.
 
@@ -504,6 +455,6 @@ How does it work? On one of the servers on the LAN is a program that is listenin
 
 If you have WiFi at home, you very likely already have a DHCP server. Most routers come from your ISP with DHCP already set up, which is how your laptop gets its IP address on your LAN.
 
-# IP4 and IP6
+## IP4 and IP6
 
 [Refer documentation](https://beej.us/guide/bgnet0/html/#the-internet-protocol-version-4)

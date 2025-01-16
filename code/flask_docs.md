@@ -9,7 +9,7 @@
   app = Flask(__name__)
 ```
 
-# Route and View functions
+## Route and View functions
 
 - The association between a URL and the function that handles it is called a /route/.
 
@@ -32,7 +32,7 @@
 - Dynamic component in routes are strings by default but can also be defined with a type. Example: '/user/<int:id>' - would match only URLs that have an integer in the id dynamic segment.
 - Flask supports int, float, and path for routes. The path type also represents a string but does not consider slashes as separators and instead considers them part of the dynamic component.
 
-# The Request-Response Cycle
+## The Request-Response Cycle
 
 - When Flask receives a request from a client, it needs to make a few objects available to the view function that will handle it. A good example is a request object.
 - The obvious way in which Flask could give a view function access to the request object is by sending it as an argument, but that would require every single view function in the application to have an extra argument. Things get more complicated if you consider that the request object is not the only object that the view functions might need to access to fulfill a request.
@@ -64,7 +64,7 @@ if __name__ == '__main__':
 | request       | Req Con | Contents of a HTTP request sent by the client as obj |
 | session       | Req Con | Dict, used to store values used between requests     |
 
-# Request Dispatching
+## Request Dispatching
 
 - When the application receives a request from the client, it needs to know which view function to be invoked.
 - Flask looks up the URL given in the request in the application's URL map, which contains a mapping of URLs to the view function that handle them.
@@ -79,7 +79,7 @@ Map([<Rule '/static/<filename>' (GET, HEAD, OPTIONS) -> static>,
 
 - Head, Options and Get are the request methods that are handled by the route.
 
-# Request Hooks
+## Request Hooks
 
 - Sometimes it is useful to execute code before or after each request is processed, eg: connection to database.
 - Instead of duplicating the code in every view function, flask offers an option to register common functions to be invoked before or after a request is dispatched to a view function.
@@ -92,7 +92,7 @@ Map([<Rule '/static/<filename>' (GET, HEAD, OPTIONS) -> static>,
 | after request        | Register a function to run after each request, if no unhandled exceptions occurred   |
 | teardown request     | Register a function to run after each request, even if unhandled exceptions occurred |
 
-# Responses
+## Responses
 
 - When Flask invokes a view function, it expects its return values to be the response of the request. In most cases, its just a string.
 - The HTTP protocol requires more than a string as a response to the request such as a status code.
@@ -126,7 +126,7 @@ Map([<Rule '/static/<filename>' (GET, HEAD, OPTIONS) -> static>,
       return redirect('https://thekafkaa.online')
 ```
 
-# Templates
+## Templates
 
 - A template is a file that contains the text of a response, with placeholder variables for the dynamic parts that will be known only in the context of a request. The process that replaces the variables with actual values and returns a final response string is called rendering.
 - Flask uses Jinja2 for rendering.
