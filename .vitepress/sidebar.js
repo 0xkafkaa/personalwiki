@@ -47,6 +47,10 @@ export const sidebar = [
     "text": "Devops",
     "items": [
       {
+        "text": "Terraform",
+        "link": "/devops/terraform"
+      },
+      {
         "text": "Docker Container And Images",
         "link": "/devops/docker_container_and_images"
       }

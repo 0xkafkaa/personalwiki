@@ -15,7 +15,7 @@
 </tr>
 <tr>
 <td><a href="#data-structures">Data Structures</a><sup>[3]</sup></td>
-<td><a href="#devops">Devops</a><sup>[1]</sup></td>
+<td><a href="#devops">Devops</a><sup>[2]</sup></td>
 <td><a href="#networking">Networking</a><sup>[1]</sup></td>
 </tr>
 </tbody>
@@ -67,6 +67,7 @@
 ### Devops
 
 <ul>
+<li><a href="/devops/terraform">Terraform</a></li>
 <li><a href="/devops/docker_container_and_images">Docker Container And Images</a></li>
 </ul>
 
