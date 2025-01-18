@@ -1,5 +1,3 @@
-# Terraform
-
 Terraform is a tool to manage infrastructure as code. It enables the provisioning and management of cloud and on-premises resources using a declarative configuration language, making it easier to automate and maintain infrastructure across multiple platforms.
 
 ![terraform-1](/terraform-1.png)
@@ -109,3 +107,25 @@ variable "project_environment" {
   }
 }
 ```
+
+## Terraform tfvars
+
+### variable.tf
+
+![terraform-13](/terraform-13.png)
+
+### terraform.tfvars
+
+![terraform-14](/terraform-14.png)
+
+### multiple terraform.tfvars
+
+![terraform-17](/terraform-17.png)
+
+### variables passing from cmd
+
+![terraform-15](/terraform-15.png)
+
+## Terraform locals
+
+![terraform-16](/terraform-16.png)
