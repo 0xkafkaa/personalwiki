@@ -53,6 +53,15 @@ export const sidebar = [
     ]
   },
   {
+    "text": "Database",
+    "items": [
+      {
+        "text": "Introduction To Dbms",
+        "link": "/database/Introduction_to_DBMS"
+      }
+    ]
+  },
+  {
     "text": "Devops",
     "items": [
       {
