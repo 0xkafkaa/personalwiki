@@ -288,6 +288,8 @@ async def create_sidebar_config(category_names):
             "items": items
         })
 
+
+
     with open(".vitepress/sidebar.js", "w") as sidebar_file:
         sidebar_file.write("export const sidebar = ")
         json.dump(sidebar_config, sidebar_file, indent=2)

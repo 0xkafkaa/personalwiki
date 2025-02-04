@@ -53,15 +53,6 @@ export const sidebar = [
     ]
   },
   {
-    "text": "Database",
-    "items": [
-      {
-        "text": "Introduction To Dbms",
-        "link": "/database/Introduction_to_DBMS"
-      }
-    ]
-  },
-  {
     "text": "Devops",
     "items": [
       {
@@ -80,6 +71,15 @@ export const sidebar = [
       {
         "text": "Networking Concepts",
         "link": "/networking/networking_concepts"
+      }
+    ]
+  },
+  {
+    "text": "Sap",
+    "items": [
+      {
+        "text": "Selenium Sap Taf Integration",
+        "link": "/sap/Selenium_SAP_TAF_Integration"
       }
     ]
   }
