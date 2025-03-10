@@ -78,6 +78,10 @@ export const sidebar = [
     "text": "Sap",
     "items": [
       {
+        "text": "Simple Github Workflow",
+        "link": "/sap/Simple_Github_Workflow"
+      },
+      {
         "text": "Selenium Sap Taf Integration",
         "link": "/sap/Selenium_SAP_TAF_Integration"
       }
